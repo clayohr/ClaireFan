@@ -40,6 +40,8 @@ class StdOutListener(StreamListener):
         if user_id == 2941719227:
             print("oh yeah game time")  # optional
             respondToTweet(tweet, tweetId)
+            
+            
 
 
 
@@ -51,6 +53,8 @@ def followStream():
 
 def respondToTweet(tweet, tweetId):
     api.update_status(tweet, in_reply_to_status_id=tweetId, auto_populate_reply_metadata=True)
+
+
 
 if __name__ == "__main__":
     followStream()
